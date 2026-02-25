@@ -14,7 +14,7 @@ spec:
       spec:
         containers:
           - name: spring-boot-web-app
-            image: abkaplesh02/spring-boot-web-app:latest
+            image: abkaplesh02/java-devops-app:latest
             ports:
               - containerPort: 8080
             envFrom:
