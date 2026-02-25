@@ -13,7 +13,7 @@ spec:
           app: spring-boot-web-app
       spec:
         containers:
-          - name: spring-boot-web-app
+          - name: java-devops-app
             image: abkaplesh02/java-devops-app:v3
             ports:
               - containerPort: 8080
