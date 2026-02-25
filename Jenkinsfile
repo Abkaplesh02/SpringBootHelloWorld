@@ -40,7 +40,10 @@ pipeline{
 
         stage('Deploy to kubernetes'){
             steps{
+                sh '''
+                export KUBECONFIG=/home/jenkins/.kube/config
                 sh 'kubectl apply -f k8s/';
+                '''
 
             }
         }
