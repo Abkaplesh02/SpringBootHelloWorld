@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     environment {
-        DOCKER_IMAGE = "abkaplesh02/java-devops-app:v3"
+        DOCKER_IMAGE = "abkaplesh02/java-devops-app"
         VERSION="v3"
     }
 
