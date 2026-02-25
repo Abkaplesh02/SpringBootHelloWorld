@@ -19,12 +19,13 @@ pipeline{
                 sh 'docker build -t $DOCKER_IMAGE:$VERSION .'
             }
         }
-
         stage('Docker Login'){
             steps{
+                sh 'docker info'
+                sh 'curl -v https://registry-1.docker.io/v2/'
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-creds',
-                usernameVariable: 'DOCKER_USER',
-                passwordVariable: 'DOCKER_PASS')]){
+                        usernameVariable: 'DOCKER_USER',
+                        passwordVariable: 'DOCKER_PASS')]){
                     sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
                 }
             }
