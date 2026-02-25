@@ -3,7 +3,7 @@ pipeline{
 
     environment {
         DOCKER_IMAGE = "abkaplesh02/java-devops-app"
-        VERSION="v2"
+        VERSION="v3"
     }
 
     stages{
